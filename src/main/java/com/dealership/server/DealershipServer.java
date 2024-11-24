@@ -27,7 +27,7 @@ public class DealershipServer extends HttpServlet {
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		request.getRequestDispatcher("marketplace.jsp").forward(request, response);
+		request.getRequestDispatcher("marketplace/index.jsp").forward(request, response);
 		
 	}
 	
@@ -48,7 +48,7 @@ public class DealershipServer extends HttpServlet {
 		}
 	
 		
-		request.getRequestDispatcher("marketplace.jsp").forward(request, response);
+		request.getRequestDispatcher("marketplace/index.jsp").forward(request, response);
 	}
 	
 	public void loadVehicles() {
