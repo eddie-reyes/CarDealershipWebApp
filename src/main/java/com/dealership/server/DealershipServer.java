@@ -4,19 +4,21 @@ import java.io.*;
 import java.util.ArrayList;
 
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 
-
+@WebServlet("/marketplace")
 public class DealershipServer extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 	
 	public static ArrayList<Vehicle> vehicles = new ArrayList<Vehicle>();
+	
+	public static DealershipCart cart = new DealershipCart();
 
-	@Override
 	public void init() throws ServletException {
 		
 		loadVehicles();
@@ -27,6 +29,26 @@ public class DealershipServer extends HttpServlet {
 		
 		request.getRequestDispatcher("marketplace.jsp").forward(request, response);
 		
+	}
+	
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		int lotIndex = Integer.parseInt(request.getParameter("lotIndex"));
+		
+		Vehicle selectedVehicle = vehicles.get(lotIndex);
+		
+		
+		if (cart.getItems().contains(selectedVehicle)) {
+			
+			cart.onRemoveItem(selectedVehicle);
+			
+		} else {
+			
+			cart.onAddItem(selectedVehicle);
+		}
+	
+		
+		request.getRequestDispatcher("marketplace.jsp").forward(request, response);
 	}
 	
 	public void loadVehicles() {
@@ -46,7 +68,9 @@ public class DealershipServer extends HttpServlet {
 				2015,
 				9447,
 				26,
-				true));
+				false));
+		
+		vehicles.get(1).setInStock(false);
 		
 	}
 	

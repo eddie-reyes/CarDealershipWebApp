@@ -10,6 +10,7 @@ public class Vehicle {
 	private double m_MilesPerGallon;
 	private boolean m_PreOwned;
 	private boolean m_InStock = true;
+	private boolean m_InCart = false;
 
 	public Vehicle(String make, String model, String imageLink, int year, int price, double milesPerGallon, boolean preOwned) {
 		
@@ -53,6 +54,24 @@ public class Vehicle {
 	
 	public boolean getInStock() {
 		return m_InStock;
+	}
+	
+	public void setInStock(boolean input) {
+		
+		m_InStock = input;
+		
+	}
+	
+	public boolean getInCart() {
+		
+		return m_InCart;
+		
+	}
+	
+	public void setInCart(boolean input) {
+		
+		m_InCart = input;
+		
 	}
 	
 }

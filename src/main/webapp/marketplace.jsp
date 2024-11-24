@@ -18,16 +18,31 @@
 			<c:forEach items="${DealershipServer.vehicles}" var="vehicle">
 			
 				<div class="marketplace-card">
-					<h2>Lot #${ DealershipServer.vehicles.indexOf(vehicle) + 1 }</h2>
+					<h2>Lot #<span id="lot-id">${ DealershipServer.vehicles.indexOf(vehicle) + 1 }</span></h2>
 					<img src=${ vehicle.getImageLink() } alt=${ vehicle.getMake() } width="300" height="300">
 					<h2>Make: ${ vehicle.getMake() }</h2>
 					<h2>Model: ${ vehicle.getModel() }</h2>
 					<h2>Year: ${ vehicle.getYear() }</h2>
 					<h2>Price: $${ vehicle.getPrice() }</h2>
+					<c:if test= "${ vehicle.getInStock()  }">
+							<form method="post">
+								<c:if test= "${ vehicle.getInCart() }">
+									<button name="lotIndex" value="${ DealershipServer.vehicles.indexOf(vehicle) }">Remove from Cart</button>
+								</c:if>
+								<c:if test= "${ !vehicle.getInCart() }">
+									<button name="lotIndex" value="${ DealershipServer.vehicles.indexOf(vehicle) }">Add to Cart</button>
+								</c:if>
+								
+							</form>
+						</c:if>
+					<c:if test= "${ !vehicle.getInStock()  }"><button disabled>Sold Out</button></c:if>
 				</div>
-	
+
 			</c:forEach>
 		</div>
 		
+		<div class="cart">
+			<h2>Items in cart: ${ DealershipServer.cart.getItems().size() }</h2>
+		</div>
 	</body>
 </html>
