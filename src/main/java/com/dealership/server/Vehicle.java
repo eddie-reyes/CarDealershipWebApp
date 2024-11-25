@@ -1,6 +1,6 @@
 package com.dealership.server;
 
-public class Vehicle {
+public abstract class Vehicle {
 
 	private String m_Make;
 	private String m_Model;
@@ -73,5 +73,7 @@ public class Vehicle {
 		m_InCart = input;
 		
 	}
+	
+	public abstract String getSpecialFeatures();
 	
 }
