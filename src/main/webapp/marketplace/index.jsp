@@ -3,7 +3,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
-<%@ page import= "com.dealership.server.DealershipServer" %>
+<%@ page import= "com.dealership.server.MarketplaceServlet" %>
 <%@ page import= "com.dealership.server.Vehicle" %>
 
 <html>
@@ -15,8 +15,8 @@
 	<body>
 		<h1 class="header">SMC Dealership</h1>
 		<div class="marketplace-lot">
-			<c:forEach items="${DealershipServer.vehicles}" var="vehicle">
-				<c:set var="vehicleIdx" value = "${ DealershipServer.vehicles.indexOf(vehicle) }"></c:set>
+			<c:forEach items="${MarketplaceServlet.vehicles}" var="vehicle">
+				<c:set var="vehicleIdx" value = "${ MarketplaceServlet.vehicles.indexOf(vehicle) }"></c:set>
 			
 				<div class="marketplace-card">
 					<h2>Lot #<span id="lot-id">${ vehicleIdx + 1 }</span></h2>
@@ -43,7 +43,8 @@
 		</div>
 		
 		<div class="cart">
-			<h2>Items in cart: ${ DealershipServer.cart.getItems().size() }</h2>
+			<h2>Items in cart: ${ MarketplaceServlet.cart.getItems().size() }</h2>
+			<a href="./checkout"><button>Go to Checkout</button></a>
 		</div>
 	</body>
 </html>
