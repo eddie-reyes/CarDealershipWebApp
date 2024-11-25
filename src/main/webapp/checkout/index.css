@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+.cart-items {
+	
+	
+	display: flex;
+	gap: 5rem;
+	margin: 5rem;
+	
+}
