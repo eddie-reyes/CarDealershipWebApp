@@ -16,7 +16,6 @@
 		<h1 class="header">SMC Dealership</h1>
 		<div class="marketplace-lot">
 			<c:forEach items="${MarketplaceServlet.vehicles}" var="vehicle" varStatus="loop">
-				<c:set var="vehicleIdx" value = "${ MarketplaceServlet.vehicles.indexOf(vehicle) }"></c:set>
 			
 				<div class="marketplace-card">
 					<h2>Lot #<span id="lot-id">${ loop.count }</span></h2>

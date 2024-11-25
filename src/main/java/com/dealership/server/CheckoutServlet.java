@@ -1,7 +1,6 @@
 package com.dealership.server;
 
 import java.io.*;
-import java.util.ArrayList;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -14,10 +13,6 @@ import jakarta.servlet.http.HttpServletResponse;
 public class CheckoutServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
-	
-	public static ArrayList<Vehicle> vehicles = new ArrayList<Vehicle>();
-	
-	public static ShoppingCart cart = new ShoppingCart();
 
 	public void init() throws ServletException {
 		
