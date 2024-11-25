@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+
+
+
+
+h2 {
+	
+	margin : 0;
+}
+
+.header {
+	
+	text-align : center;
+	margin-bottom : 5rem;
+}
+
+.marketplace-card {
+	
+	text-align : center;
+	
+}
+
+.marketplace-lot {
+	
+	
+	display: flex;
+	gap: 5rem;
+	margin: 5rem;
+	
+}
+
+.cart {
+	
+	
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	margin : 2rem;
+	
+}
