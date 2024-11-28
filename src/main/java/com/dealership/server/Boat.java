@@ -19,4 +19,5 @@ public class Boat extends Vehicle {
     this.bodyStyle = bodyStyle;
 
   }
-  
+
+}
