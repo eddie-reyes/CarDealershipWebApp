@@ -20,6 +20,7 @@ public class Motorcycle extends Vehicle {
     m_BodyStyle = bodyStyle;
 
   }
+}
 		
 
   
