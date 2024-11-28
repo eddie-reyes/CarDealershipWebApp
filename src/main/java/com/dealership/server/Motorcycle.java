@@ -1,11 +1,13 @@
 package com.dealership.server;
 
-enum BoatBodyStyle {
+enum BikeBodyStyle {
 
-  SPEED,
-  YACHT,
-  SAILBOAT,
+  SPORT,
+  CRUISER,
+  OFF_ROAD,
+  TOURING,
 
 }
 
+public class 
 
