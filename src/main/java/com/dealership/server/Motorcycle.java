@@ -18,6 +18,8 @@ public class Motorcycle extends Vehicle {
 		super(make, model, imageLink, year, price, milesPerGallon, preOwned);
 
     m_BodyStyle = bodyStyle;
+
+  }
 		
 
   
