@@ -103,6 +103,27 @@ public class MarketplaceServlet extends HttpServlet {
 			false,
 			DriveTrainType.RWD,
 			CarBodyStyloe.COUPE));
+		vehicles.add(new Car(
+			"BMW",
+			"M4",
+			"https://s1.cdn.autoevolution.com/images/news/2021-bmw-m4-design-revealed-in-accurate-rendering-g82-is-one-strange-fish-146832_1.jpg",
+			2021,
+			80000,
+			15,
+			false,
+			DriveTrainType.RWD,
+			CarBodyStyle.Coupe));
+		vehicles.add(new Car(
+			"Honda",
+			"Odyssey",
+			"https://www.iihs.org/cdn-cgi/image/width=636/api/ratings/model-year-images/1820/",
+			2012,
+			3800,
+			16,
+			true,
+			DriveTrainType.FWD,
+			CarBodyStyle.VAN));
+			
 			
 		
 		vehicles.get(1).setInStock(false);
