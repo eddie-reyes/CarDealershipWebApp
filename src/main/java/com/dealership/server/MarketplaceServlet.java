@@ -73,6 +73,17 @@ public class MarketplaceServlet extends HttpServlet {
 				false,
 				DriveTrainType.AWD,
 				CarBodyStyle.COUPE));
+		vehicles.add(new Car(
+			"Mercedes",
+			"E350",
+			"https://preview.redd.it/one-of-the-last-w211s-made-2009-e350-daily-driver-in-the-v0-qhexj8k7yzla1.jpg?width=1080&crop=smart&auto=webp&s=743a2477fc32c9b817955ed9e58eb2f1def92d8d",
+			2006,
+			5500,
+			18,
+			true,
+			DriveTrainType.RWD,
+			CarBodyStyle.SEDAN));
+			
 		
 		vehicles.get(1).setInStock(false);
 		
