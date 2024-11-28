@@ -83,6 +83,26 @@ public class MarketplaceServlet extends HttpServlet {
 			true,
 			DriveTrainType.RWD,
 			CarBodyStyle.SEDAN));
+		vehicles.add(new Car(
+			"Toyota",
+			"Camry",
+			"https://www.motorbiscuit.com/wp-content/uploads/2023/01/2004-Toyota-Camry.jpg",
+			2004,
+			3250,
+			25,
+			true,
+			DriveTrainType.FWD,
+			CarBodyStyle.SEDAN));
+		vehicles.add(new Car(
+			"Ford",
+			"Mustang GT",
+			"https://hips.hearstapps.com/hmg-prod/images/2024-ford-mustang-gt-111-64e6608fce997.jpg?crop=0.546xw:0.615xh;0.0737xw,0.325xh&resize=768:*",
+			2024,
+			48000,
+			13,
+			false,
+			DriveTrainType.RWD,
+			CarBodyStyloe.COUPE));
 			
 		
 		vehicles.get(1).setInStock(false);
