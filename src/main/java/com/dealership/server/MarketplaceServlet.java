@@ -102,7 +102,7 @@ public class MarketplaceServlet extends HttpServlet {
 			13,
 			false,
 			DriveTrainType.RWD,
-			CarBodyStyloe.COUPE));
+			CarBodyStyle.COUPE));
 		vehicles.add(new Car(
 			"BMW",
 			"M4",
@@ -112,7 +112,7 @@ public class MarketplaceServlet extends HttpServlet {
 			15,
 			false,
 			DriveTrainType.RWD,
-			CarBodyStyle.Coupe));
+			CarBodyStyle.COUPE));
 		vehicles.add(new Car(
 			"Honda",
 			"Odyssey",
