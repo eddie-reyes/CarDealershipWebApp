@@ -6,6 +6,7 @@ enum BikeBodyStyle {
   CRUISER,
   OFF_ROAD,
   TOURING,
+  CUSTOM
 
 }
 
