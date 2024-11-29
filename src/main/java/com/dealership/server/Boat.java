@@ -5,6 +5,9 @@ enum BoatBodystyle {
   SPEED,
   YACHT,
   SAILBOAT,
+  CRUISER,
+FLYBRIDGE,
+BOWRIDER
 
 }
 
