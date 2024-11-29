@@ -6,20 +6,20 @@ enum BoatBodystyle {
   YACHT,
   SAILBOAT,
   CRUISER,
-FLYBRIDGE,
-BOWRIDER
+  FLYBRIDGE,
+  BOWRIDER
 
 }
 
 public class Boat extends Vehicle {
 
-  private BoatBodystyle bodyStyle;
+    BoatBodystyle m_BodyStyle;
 
-  public Boat(String make, String model, String imageLink, int year, int price, boolean preOwned, CarBodyStyle bodyStyle ) {
+  public Boat(String make, String model, String imageLink, int year, int price, double milesPerGallon, boolean preOwned, DriveTrainType driveTrain, BoatBodyStyle bodyStyle ) {
 		
-		super(make, model, imageLink, year, price, preOwned);
+		super(make, model, imageLink, year, price, milesPerGallon, preOwned);
 
-    this.bodyStyle = bodyStyle;
+    		m_BodyStyle = bodyStyle;
 
   }
 
