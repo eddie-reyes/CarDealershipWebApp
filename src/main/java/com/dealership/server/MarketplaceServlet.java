@@ -123,6 +123,66 @@ public class MarketplaceServlet extends HttpServlet {
 			true,
 			DriveTrainType.FWD,
 			CarBodyStyle.VAN));
+		vehicles.add(new Car(
+			"Ferrari",
+			"LaFerrari",
+			"https://www.charlottemotorspeedway.com/images/La-Ferrari--Hendrick-lg.JPG",
+			2017,
+			4000000,
+			12,
+			true,
+			DriveTrainType.RWD,
+			CarBodyStyle.COUPE));
+		vehicles.add(new Car(
+			"Porsche",
+			"918 Spyder",
+			"https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Porsche_918_Spyder_IAA_2013.jpg/1200px-Porsche_918_Spyder_IAA_2013.jpg",
+			2016,
+			2000000,
+			16,
+			true,
+			DriveTrainType.AWD,
+			CarBodyStyle.COUPE));
+		vehicles.add(new Car(
+			"Mercedes",
+			"C63 AMG",
+			"https://bringatrailer.com/wp-content/uploads/2020/04/2012_mercedes-benz_c63_amg_15970725257d1dc9f9ab8e8B0C08B2D-95B9-4A20-B74D-FD057599AAD4.jpeg",
+			2012,
+			23000,
+			14,
+			true,
+			DriveTrainType.RWD,
+			CarBodyStyle.SEDAN));
+		vehicles.add(new Car(
+			"Mazda",
+			"3",
+			"https://cars.usnews.com/static/images/Auto/izmo/338625/2012_mazda_mazda3_angularfront.jpg",
+			2012,
+			2800,
+			16,
+			true,
+			DriveTrainType.FWD,
+			CarBodyStyle.HATCHBACK));
+		Vehicles.add(new Car(
+			"Ford",
+			"Raptor",
+			"https://bringatrailer.com/wp-content/uploads/2023/09/2021_ford_f-150-raptor_img_2810-09483.jpeg?fit=940%2C626",
+			2021,
+			64000,
+			8,
+			false,
+			DriveTrainType.AWD,
+			CarBodyStyle.TRUCK));
+		vehicles.add(new Car(
+			"Ford",
+			"Mustang Ecoboost",
+			"https://di-uploads-pod39.dealerinspire.com/towncountryfordoflou/uploads/2021/05/2021-Ford-Mustang-Ecoboost-Premium-Model-Left.jpeg",
+			2021,
+			36000,
+			18,
+			true,
+			DriveTrainType.RWD,
+			CarBodyStyle.COUPE));
 			
 			
 		
