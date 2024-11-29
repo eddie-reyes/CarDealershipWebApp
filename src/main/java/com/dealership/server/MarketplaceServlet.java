@@ -52,7 +52,7 @@ public class MarketplaceServlet extends HttpServlet {
 	}
 	
 	public void loadVehicles() {
-		
+		//cars
 		vehicles.add(new Car(
 				"Toyota",
 				"Corolla E10",
@@ -183,8 +183,110 @@ public class MarketplaceServlet extends HttpServlet {
 			true,
 			DriveTrainType.RWD,
 			CarBodyStyle.COUPE));
-			
-			
+		//motorcycles
+		vehicles.add(new Motorcycle(
+			"Honda",
+			"VTX 1300 R",
+			"https://www.webbikeworld.com/honda-vtx1300r/vtx1300r-09c/",
+			2007,
+			3300,
+			45,
+			true,
+			BikeBodyStyle.CRUISER));
+		vehicles.add(new Motorcycle(
+			"Honda",
+			"CL 70",
+			"https://cdn.dealeraccelerate.com/street/1/362/15142/1920x1440/1970-honda-cl70-restored-for-office-display-super-slick",
+			1966,
+			3000,
+			43,
+			true,
+			BikeBodyStyle.CUSTOM));
+		vehicles.add(new Motorcycle(
+			"Harley-Davidson",
+			"Iron 1200",
+			"https://cdn.dealerspike.com/imglib/products/harley-showroom/2019/sportster-iron-1200/high-res-jpg-19-x-l1200-ns-r-v2-853x435.png",
+			2011,
+			14950,
+			52,
+			true,
+			BikeBodyStyle.SPORT));
+		vehicles.add(new Motorcycle(
+			"Triumph",
+			"Tiger 800 XC",
+			"https://cdn.dealerspike.com/imglib/v1/800x600/imglib/trimsdb/11166621-0-71182891.jpg",
+			2014,
+			4500,
+			43,
+			true,
+			BikeBodyStyle.SPORT));
+		vehicles.add(new Motorcycle(
+			"Triumph",
+			"Bonneville T120"
+			"https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto:eco/sitecoremedialibrary/media-library/images/motorcycles/t120%20black%202025/bonneville_t120_black_my25_graphite_rhs_1080px.png",
+			2019,
+			1200,
+			65,
+			false,
+			BikeBodyStyle.CRUISER));
+		vehicles.add(new Motorcycle(
+			"Yamaha",
+			"FJ-09",
+			"https://adventuremotorcycle.com/images/ARTICLES/Bikes/Yamaha_FJ09/gallery/2015-FJ-09-Gallery1.jpg",
+			2015,
+			2585,
+			46,
+			true,
+			BikeBodyStyle.SPORT));
+		vehicles.add(new Motorcycle(
+			"BMW",
+			"R 1200 GS",
+			"https://mediapool.bmwgroup.com/cache/P9/201609/P90235547/P90235547-the-new-bmw-r-1200-gs-11-2016-600px.jpg",
+			2011,
+			8350,
+			59,
+			true,
+			BikeBodyStyle.SPORT));
+		vehicles.add(new Motorcycle(
+			"BMW",
+			"T Ninet 719",
+			"https://cdn.dealerspike.com/imglib/v1/800x600/imglib/trimsdb/19223621-0-119339971.jpg",
+			2018,
+			12600,
+			41,
+			true,
+			BikeBodyStyle.CUSTOM));
+		vehicles.add(new Motorcycle(
+			"Honda",
+			"Gold Wing Tour",
+			"https://cdnmedia.endeavorsuite.com/images/ThumbGenerator/Thumb.aspx?img=%2F%2Fcdnmedia.endeavorsuite.com%2Fimages%2Fcatalogs%2F21278%2Fproducts%2Fdetail%2F51dab43c-23e8-4c01-a30f-f719147151f9.jpg&mw=1000&mh=563&f=1",
+			2024,
+			30000,
+			67,
+			false,
+			BikeBodyStyle.CRUISER));
+		vehicles.add(new Motorcycle(
+			"Honda",
+			"Rebel 1100",
+			"https://cloudfront-us-east-1.images.arcpublishing.com/octane/3LYCJ75HVRCABCSADTY7AHKTIA.jpg",
+			2024,
+			10000,
+			53,
+			false,
+			BikeBodyStyle.CRUISER));
+		vehicles.add(new Motorcycle(
+			"Honda",
+			"Fireblade SP",
+			"https://www.slashgear.com/img/gallery/honda-cbr1000rr-r-fireblade-sp-review-turns-every-road-into-a-track/l-intro-1695055262.jpg",
+			2024,
+			30000,
+			50,
+			false,
+			BikeBodyStyle.SPORT));
+		//Boats
+		vehicles.add(new Boat(
+			"",
+		
 		
 		vehicles.get(1).setInStock(false);
 		
