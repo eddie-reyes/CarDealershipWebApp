@@ -15,7 +15,7 @@ public class Boat extends Vehicle {
 
     BoatBodystyle m_BodyStyle;
 	
-	//Possibly have to take out "double milesPerGallon" and "DriveTrainType driveTrain" inside this parameter if code doesn’t work.
+	//Possibly have to take out "double milesPerGallon" and "DriveTrainType driveTrain" inside this parentheses if code doesn’t work.
 	
 	public Boat(String make, String model, String imageLink, int year, int price, double milesPerGallon, boolean preOwned, DriveTrainType driveTrain, BoatBodyStyle bodyStyle ) {
 		
