@@ -17,7 +17,7 @@ public class MarketplaceServlet extends HttpServlet {
 	
 	public static ArrayList<Vehicle> vehicles = new ArrayList<Vehicle>();
 	
-	public static ShoppingCart cart = new ShoppingCart();
+	public static String sortQuery;
 
 	public void init() throws ServletException {
 		
@@ -27,6 +27,12 @@ public class MarketplaceServlet extends HttpServlet {
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		sortQuery = request.getParameter("sort");
+		
+		boolean isValidQuery = (sortQuery.equalsIgnoreCase("car") || sortQuery.equalsIgnoreCase("motorcycle") || sortQuery.equalsIgnoreCase("boat") );
+		
+		if (!isValidQuery) sortQuery = "";	
+		
 		request.getRequestDispatcher("marketplace/index.jsp").forward(request, response);
 		
 	}
@@ -35,16 +41,16 @@ public class MarketplaceServlet extends HttpServlet {
 		
 		int lotIndex = Integer.parseInt(request.getParameter("lotIndex"));
 		
-		Vehicle selectedVehicle = vehicles.get(lotIndex);
+		Vehicle selectedVehicle = vehicles.get(lotIndex);	
 		
-		
-		if (cart.getItems().contains(selectedVehicle)) {
+		if (CheckoutServlet.cart.getItems().contains(selectedVehicle)) {
 			
-			cart.onRemoveItem(selectedVehicle);
+			CheckoutServlet.cart.onRemoveItem(selectedVehicle);
 			
 		} else {
 			
-			cart.onAddItem(selectedVehicle);
+			CheckoutServlet.cart.onAddItem(selectedVehicle);
+		
 		}
 	
 		
@@ -54,25 +60,25 @@ public class MarketplaceServlet extends HttpServlet {
 	public void loadVehicles() {
 		//cars
 		vehicles.add(new Car(
-				"Toyota",
-				"Corolla E10",
-				"https://www.mycarpaint.net/wp-content/uploads/Toyota-Corolla-1995-1.jpg",
-				1995,
-				8625,
-				30.8,
-				true,
-				DriveTrainType.AWD,
-				CarBodyStyle.HATCHBACK));
+			"Toyota",
+			"Corolla E10",
+			"https://www.mycarpaint.net/wp-content/uploads/Toyota-Corolla-1995-1.jpg",
+			1995,
+			8625,
+			30.8,
+			true,
+			DriveTrainType.AWD,
+			CarBodyStyle.HATCHBACK));
 		vehicles.add(new Car(
-				"Volkswagen",
-				"Beetle",
-				"https://images.hgmsites.net/lrg/2015-volkswagen-beetle-convertible-2-door-auto-1-8t-angular-front-exterior-view_100488334_l.jpg",
-				2015,
-				9447,
-				26,
-				false,
-				DriveTrainType.AWD,
-				CarBodyStyle.COUPE));
+			"Volkswagen",
+			"Beetle",
+			"https://images.hgmsites.net/lrg/2015-volkswagen-beetle-convertible-2-door-auto-1-8t-angular-front-exterior-view_100488334_l.jpg",
+			2015,
+			9447,
+			26,
+			false,
+			DriveTrainType.AWD,
+			CarBodyStyle.COUPE));
 		vehicles.add(new Car(
 			"Mercedes",
 			"E350",
@@ -331,7 +337,7 @@ public class MarketplaceServlet extends HttpServlet {
 			BoatBodyStyle.YACHT));
 		
 		
-		vehicles.get(1).setInStock(false);
+		//vehicles.get(1).setInStock(false);
 	
 	}
 	

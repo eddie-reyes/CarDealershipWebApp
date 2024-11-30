@@ -3,7 +3,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
-<%@ page import= "com.dealership.server.MarketplaceServlet" %>
+<%@ page import= "com.dealership.server.CheckoutServlet" %>
 <%@ page import= "com.dealership.server.Vehicle" %>
 
 <html>
@@ -15,7 +15,7 @@
 	<body>
 		<h1>Items in Cart</h1>
 		<div class="cart-items">
-			<c:forEach items="${MarketplaceServlet.vehicles}" var="vehicle" varStatus="loop">
+			<c:forEach items="${CheckoutServlet.cart.items}" var="vehicle" varStatus="loop">
 			
 				<div class="cart-card">
 
