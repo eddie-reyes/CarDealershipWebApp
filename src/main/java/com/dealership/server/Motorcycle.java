@@ -21,6 +21,34 @@ public class Motorcycle extends Vehicle {
     		m_BodyStyle = bodyStyle;
 
   }
+
+    @Override
+    public String getSpecialFeatures() {
+        String retval = "Body: ";
+
+        switch (m_BodyStyle) {
+            case SPORT:
+                retval += "Sport";
+                break;
+            case CRUISER:
+                retval += "Cruiser";
+                break;
+            case OFF_ROAD:
+                retval += "Off-Road";
+                break;
+            case TOURING:
+                retval += "Touring";
+                break;
+            case CUSTOM:
+                retval += "Custom";
+                break;
+            default:
+                retval += "Unknown";
+        }
+
+        return retval;
+    }
+
 }
 		
 
