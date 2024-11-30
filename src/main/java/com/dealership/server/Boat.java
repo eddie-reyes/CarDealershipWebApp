@@ -13,35 +13,26 @@ enum BoatBodyStyle {
 
 public class Boat extends Vehicle {
 
-<<<<<<< HEAD
-  private BoatBodystyle bodyStyle;
 
-  public Boat(String make, String model, String imageLink, int year, int price, boolean preOwned, BoatBodyStyle bodyStyle ) {
-=======
-    BoatBodystyle m_BodyStyle;
+  private BoatBodyStyle m_BodyStyle;
+
 	
 	//Possibly have to take out "double milesPerGallon" and "DriveTrainType driveTrain" inside this parentheses if code doesn’t work.
 	
-	public Boat(String make, String model, String imageLink, int year, int price, double milesPerGallon, boolean preOwned, DriveTrainType driveTrain, BoatBodyStyle bodyStyle ) {
->>>>>>> d67fd32e8204d00383adf4d833a7a46cf15cc5dc
+	public Boat(String make, String model, String imageLink, int year, int price, double milesPerGallon, boolean preOwned, BoatBodyStyle bodyStyle ) {
+
 		
 		super(make, model, imageLink, year, price, milesPerGallon, preOwned);
 
     		m_BodyStyle = bodyStyle;
 
-  }
-<<<<<<< HEAD
-  
-  public String getSpecialFeatures() {
-	  
-	  return "";
-  }
-=======
+	}
+
+
 	//Only included Body Style since Drive Train not avaliable for both Bikes and Boats.
     @Override
     public String getSpecialFeatures() {
         String retval = "Body: ";
->>>>>>> d67fd32e8204d00383adf4d833a7a46cf15cc5dc
 
         switch (m_BodyStyle) {
             case SPEED:

@@ -163,7 +163,7 @@ public class MarketplaceServlet extends HttpServlet {
 			true,
 			DriveTrainType.FWD,
 			CarBodyStyle.HATCHBACK));
-		Vehicles.add(new Car(
+		vehicles.add(new Car(
 			"Ford",
 			"Raptor",
 			"https://bringatrailer.com/wp-content/uploads/2023/09/2021_ford_f-150-raptor_img_2810-09483.jpeg?fit=940%2C626",
@@ -222,7 +222,7 @@ public class MarketplaceServlet extends HttpServlet {
 			BikeBodyStyle.SPORT));
 		vehicles.add(new Motorcycle(
 			"Triumph",
-			"Bonneville T120"
+			"Bonneville T120",
 			"https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto:eco/sitecoremedialibrary/media-library/images/motorcycles/t120%20black%202025/bonneville_t120_black_my25_graphite_rhs_1080px.png",
 			2019,
 			1200,
@@ -290,6 +290,7 @@ public class MarketplaceServlet extends HttpServlet {
 			"https://cdn.denisonyachtsales.com/wp-content/uploads/2011/05/61-Sunseeker-Predator-Review.jpg",
 			2002,
 			475000,
+			0,
 			true,
 			BoatBodyStyle.CRUISER));
 		vehicles.add(new Boat(
@@ -298,6 +299,7 @@ public class MarketplaceServlet extends HttpServlet {
 			"https://images.boatsgroup.com/resize/1/30/29/1991-johnson-63-flybridge-power-9443029-20240625102954395-1_XLARGE.jpg",
 			1991,
 			199000,
+			0,
 			true,
 			BoatBodyStyle.FLYBRIDGE));
 		vehicles.add(new Boat(
@@ -306,6 +308,7 @@ public class MarketplaceServlet extends HttpServlet {
 			"https://www.searay.com/content/dam/searay/2024/model-images/spx/spx-230/2024-SPX-230-SPX230-running-starboard-stern-08674.jpg.transform/small/image.jpg",
 			2024,
 			78999,
+			0,
 			true,
 			BoatBodyStyle.BOWRIDER));
 		vehicles.add(new Boat(
@@ -314,6 +317,7 @@ public class MarketplaceServlet extends HttpServlet {
 			"https://yamahaoutboards.com/getmedia/248ce268-92ef-4f40-a89d-d988adf4b843/Leader_12-5_2020_TomKing_04128_Edit.jpg",
 			2020,
 			110000,
+			0,
 			false,
 			BoatBodyStyle.CRUISER));
 		vehicles.add(new Boat(
@@ -322,12 +326,13 @@ public class MarketplaceServlet extends HttpServlet {
 			"https://images.boatsgroup.com/resize/1/23/56/2024-benetti-oasis-34m-power-9452356-20240731162651446-1_XLARGE.jpg?w=200&h=146&t=1727294169000&exact&format=webp",
 			2025,
 			4984663,
+			0,
 			false,
 			BoatBodyStyle.YACHT));
 		
 		
 		vehicles.get(1).setInStock(false);
-		
+	
 	}
 	
 	public void destroy() {
