@@ -4,7 +4,18 @@
 	
 	
 	display: flex;
+	flex-wrap : wrap;
 	gap: 5rem;
 	margin: 5rem;
+	
+}
+
+.cart {
+	
+	
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	margin : 2rem;
 	
 }

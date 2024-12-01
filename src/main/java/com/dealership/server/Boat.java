@@ -32,7 +32,7 @@ public class Boat extends Vehicle {
 	//Only included Body Style since Drive Train not avaliable for both Bikes and Boats.
     @Override
     public String getSpecialFeatures() {
-        String retval = "Body: ";
+        String retval = "Type: ";
 
         switch (m_BodyStyle) {
             case SPEED:

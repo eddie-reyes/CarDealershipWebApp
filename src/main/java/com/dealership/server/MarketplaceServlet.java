@@ -2,6 +2,7 @@ package com.dealership.server;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -337,7 +338,7 @@ public class MarketplaceServlet extends HttpServlet {
 			BoatBodyStyle.YACHT));
 		
 		
-		//vehicles.get(1).setInStock(false);
+		Collections.shuffle(vehicles);
 	
 	}
 	

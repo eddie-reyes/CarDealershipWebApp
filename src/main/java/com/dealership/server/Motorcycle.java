@@ -24,7 +24,7 @@ public class Motorcycle extends Vehicle {
 
     @Override
     public String getSpecialFeatures() {
-        String retval = "Body: ";
+        String retval = "Type: ";
 
         switch (m_BodyStyle) {
             case SPORT:

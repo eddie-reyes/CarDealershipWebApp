@@ -48,8 +48,16 @@ public abstract class Vehicle {
 		return m_MilesPerGallon;
 	}
 	
-	public boolean getPreOwned() {
-		return m_PreOwned;
+	public String getPreOwned() {
+		
+		if (m_PreOwned) {
+			
+			return "Pre-Owned";
+			
+		} else {
+			
+			return "New";
+		}
 	}
 	
 	public boolean getInStock() {

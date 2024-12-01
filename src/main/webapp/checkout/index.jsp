@@ -27,6 +27,15 @@
 
 			</c:forEach>
 		</div>
+		<h2>Total: $${CheckoutServlet.cart.getTotalCost() }</h2>
+		
+		<div class="purchase">
+			<form method="post">
+				<a href="./homepage">
+					<button>Purchase</button>
+				</a>
+			</form>
+		</div>
 		
 	</body>
 </html>

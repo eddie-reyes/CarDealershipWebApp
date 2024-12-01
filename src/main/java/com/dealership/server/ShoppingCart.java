@@ -17,18 +17,28 @@ public class ShoppingCart {
 	
 	public void onRemoveItem(Vehicle item) {
 		
-		
 		items.remove(item);
 		item.setInCart(false);
-		
 		
 	}
 	
 	public ArrayList<Vehicle> getItems() {
 		
-		
 		return items;
 		
+	}
+	
+	public int getTotalCost() {
+		
+		int sum = 0;
+		
+		for (Vehicle vehicle : items) {
+			
+			sum += vehicle.getPrice();
+			
+		}
+		
+		return sum;
 	}
 
 }

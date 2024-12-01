@@ -29,8 +29,16 @@ public class CheckoutServlet extends HttpServlet {
 	
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		for (Vehicle vehicle : cart.getItems()) {
+			
+			vehicle.setInStock(false);
 		
-		request.getRequestDispatcher("checkout/index.jsp").forward(request, response);
+		}
+		
+		cart.getItems().clear();
+		
+		
+		request.getRequestDispatcher("homepage/index.jsp").forward(request, response);
 	}
 	
 	

@@ -20,14 +20,15 @@
 			
 				<c:if test = "${ vehicle.getClass().getSimpleName().toLowerCase() == MarketplaceServlet.sortQuery || MarketplaceServlet.sortQuery.isEmpty()}">
 					<div class="marketplace-card">
-						<h2>Lot #<span id="lot-id">${ loop.count }</span></h2>
-						<img src=${ vehicle.getImageLink() } alt=${ vehicle.getMake() } width="300" height="300">
-						<h2>Make: ${ vehicle.getMake() }</h2>
-						<h2>Model: ${ vehicle.getModel() }</h2>
-						<h2>Year: ${ vehicle.getYear() }</h2>
-						<h2>Price: $${ vehicle.getPrice() }</h2>
-						<h2>${ vehicle.getSpecialFeatures() }</h2>
-						<c:if test= "${ vehicle.getInStock()  }">
+						<h2>Lot #${ loop.count }</h2>
+						<img src=${ vehicle.getImageLink() } alt=${ vehicle.getMake() } width="300">
+						<ul>
+							<li class="vehicle-name">${ vehicle.getMake()} ${vehicle.getModel()}</li>
+							<li>${ vehicle.getPreOwned() }</li>
+							<li>Year: ${ vehicle.getYear() }</li>
+							<li>${ vehicle.getMilesPerGallon() } MPG</li>
+							<li>${ vehicle.getSpecialFeatures() }</li>
+							<c:if test= "${ vehicle.getInStock()  }">
 								<form method="post">
 									<c:if test= "${ vehicle.getInCart() }">
 										<button name="lotIndex" value="${ loop.index }">Remove from Cart</button>
@@ -35,10 +36,13 @@
 									<c:if test= "${ !vehicle.getInCart() }">
 										<button name="lotIndex" value="${ loop.index }">Add to Cart</button>
 									</c:if>
-									
+									<span class = "vehicle-name lot-price">$${ vehicle.getPrice() }</span>
 								</form>
 							</c:if>
-						<c:if test= "${ !vehicle.getInStock()  }"><button disabled>Sold Out</button></c:if>
+							<c:if test= "${ !vehicle.getInStock()  }"><button disabled>Sold Out</button></c:if>
+							
+						</ul>
+						
 					</div>
 				</c:if>
 					
@@ -46,8 +50,8 @@
 		</div>
 		
 		<div class="cart">
-			<h2>Items in cart: ${ CheckoutServlet.cart.getItems().size() }</h2>
-			<a href="./checkout"><button>Go to Checkout</button></a>
+			<h2 class="cart-text">Items in cart: ${ CheckoutServlet.cart.getItems().size() }&nbsp&nbsp<a href="./checkout"><button>Go to Checkout</button></a></h2>
+			
 		</div>
 	</body>
 </html>
