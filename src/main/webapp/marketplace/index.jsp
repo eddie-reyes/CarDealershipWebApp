@@ -21,7 +21,7 @@
 				<c:if test = "${ vehicle.getClass().getSimpleName().toLowerCase() == MarketplaceServlet.sortQuery || MarketplaceServlet.sortQuery.isEmpty()}">
 					<div class="marketplace-card">
 						<h2>Lot #${ loop.count }</h2>
-						<img src=${ vehicle.getImageLink() } alt=${ vehicle.getMake() } width="300">
+						<img src=${ vehicle.getImageLink() } alt=${ vehicle.getMake() } >
 						<ul>
 							<li class="vehicle-name">${ vehicle.getMake()} ${vehicle.getModel()}</li>
 							<li>${ vehicle.getPreOwned() }</li>

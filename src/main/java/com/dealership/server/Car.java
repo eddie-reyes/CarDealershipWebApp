@@ -26,7 +26,8 @@ public class Car extends Vehicle {
 	DriveTrainType m_DriveTrain;
 	
 	public Car(String make, String model, String imageLink, int year, int price, double milesPerGallon, boolean preOwned, DriveTrainType driveTrain, CarBodyStyle bodyStyle ) {
-		
+	
+		//call base constructor
 		super(make, model, imageLink, year, price, milesPerGallon, preOwned);
 		
 		m_DriveTrain = driveTrain;
@@ -34,6 +35,7 @@ public class Car extends Vehicle {
 		
 	}
 	
+	//special features related to car
 	@Override
 	public String getSpecialFeatures() {
 		

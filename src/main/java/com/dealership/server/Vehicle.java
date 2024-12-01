@@ -4,12 +4,12 @@ public abstract class Vehicle {
 
 	private String m_Make;
 	private String m_Model;
-	private String m_ImageLink;
+	private String m_ImageLink; //src link for img tag
 	private int m_Year;
 	private int m_Price;
-	private double m_MilesPerGallon;
+	private double m_MilesPerGallon; //mpg
 	private boolean m_PreOwned;
-	private boolean m_InStock = true;
+	private boolean m_InStock = true; //all vehicles start as in stock
 	private boolean m_InCart = false;
 
 	public Vehicle(String make, String model, String imageLink, int year, int price, double milesPerGallon, boolean preOwned) {
@@ -23,7 +23,7 @@ public abstract class Vehicle {
 		m_PreOwned = preOwned;
 		
 	}
-	
+	//getters
 	public String getMake() {
 		return m_Make;
 	}
@@ -64,15 +64,16 @@ public abstract class Vehicle {
 		return m_InStock;
 	}
 	
-	public void setInStock(boolean input) {
-		
-		m_InStock = input;
-		
-	}
-	
 	public boolean getInCart() {
 		
 		return m_InCart;
+		
+	}
+	
+	//setters
+	public void setInStock(boolean input) {
+		
+		m_InStock = input;
 		
 	}
 	
@@ -82,6 +83,7 @@ public abstract class Vehicle {
 		
 	}
 	
+	//must be overwritten in card, boat, and motorcycle
 	public abstract String getSpecialFeatures();
 	
 }

@@ -15,11 +15,6 @@ public class CheckoutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	public static ShoppingCart cart = new ShoppingCart();
-
-	public void init() throws ServletException {
-		
-		
-	}
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -31,14 +26,14 @@ public class CheckoutServlet extends HttpServlet {
 		
 		for (Vehicle vehicle : cart.getItems()) {
 			
-			vehicle.setInStock(false);
+			vehicle.setInStock(false); //all vehicles purchased should be sold out
 		
 		}
 		
-		cart.getItems().clear();
+		cart.getItems().clear(); //empty cart
 		
 		
-		request.getRequestDispatcher("homepage/index.jsp").forward(request, response);
+		request.getRequestDispatcher("homepage/index.jsp").forward(request, response); //forward back to homepage
 	}
 	
 	

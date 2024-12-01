@@ -21,9 +21,10 @@ public class Boat extends Vehicle {
 	
 	public Boat(String make, String model, String imageLink, int year, int price, double milesPerGallon, boolean preOwned, BoatBodyStyle bodyStyle ) {
 
-		
+		//call base constructor
 		super(make, model, imageLink, year, price, milesPerGallon, preOwned);
 
+			//special features
     		m_BodyStyle = bodyStyle;
 
 	}

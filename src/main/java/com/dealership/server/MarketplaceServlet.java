@@ -22,28 +22,33 @@ public class MarketplaceServlet extends HttpServlet {
 
 	public void init() throws ServletException {
 		
-		loadVehicles();
+		loadVehicles(); //load dataset on init
 		
 	}
 	
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		//url parameters
 		sortQuery = request.getParameter("sort");
 		
+		//determines if url parameters are valid
 		boolean isValidQuery = (sortQuery.equalsIgnoreCase("car") || sortQuery.equalsIgnoreCase("motorcycle") || sortQuery.equalsIgnoreCase("boat") );
 		
-		if (!isValidQuery) sortQuery = "";	
+		if (!isValidQuery) sortQuery = "";	//if invalid parameter, no sort
 		
+		//forward to jsp file which will be served to the user
 		request.getRequestDispatcher("marketplace/index.jsp").forward(request, response);
 		
 	}
 	
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		//cast to int
 		int lotIndex = Integer.parseInt(request.getParameter("lotIndex"));
 		
 		Vehicle selectedVehicle = vehicles.get(lotIndex);	
 		
+		//add if not in card, remove if in cart
 		if (CheckoutServlet.cart.getItems().contains(selectedVehicle)) {
 			
 			CheckoutServlet.cart.onRemoveItem(selectedVehicle);
@@ -58,6 +63,7 @@ public class MarketplaceServlet extends HttpServlet {
 		request.getRequestDispatcher("marketplace/index.jsp").forward(request, response);
 	}
 	
+	//in this project we hard-code all of the data into the backend for convenience rather than store it in some database or api endpoint
 	public void loadVehicles() {
 		//cars
 		vehicles.add(new Car(
@@ -337,7 +343,7 @@ public class MarketplaceServlet extends HttpServlet {
 			false,
 			BoatBodyStyle.YACHT));
 		
-		
+		//shuffle list to make it more interesting
 		Collections.shuffle(vehicles);
 	
 	}

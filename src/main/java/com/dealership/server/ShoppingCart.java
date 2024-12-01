@@ -6,11 +6,11 @@ public class ShoppingCart {
 	
 	private ArrayList<Vehicle> items = new ArrayList<Vehicle>();
 	
-	
+	//events
 	public void onAddItem(Vehicle item) {
 		
 		items.add(item);
-		item.setInCart(true);
+		item.setInCart(true); //set flag
 		
 	}
 	
@@ -18,10 +18,11 @@ public class ShoppingCart {
 	public void onRemoveItem(Vehicle item) {
 		
 		items.remove(item);
-		item.setInCart(false);
+		item.setInCart(false); //set flag
 		
 	}
 	
+	//getters
 	public ArrayList<Vehicle> getItems() {
 		
 		return items;
@@ -34,7 +35,7 @@ public class ShoppingCart {
 		
 		for (Vehicle vehicle : items) {
 			
-			sum += vehicle.getPrice();
+			sum += vehicle.getPrice(); //add to sum
 			
 		}
 		
