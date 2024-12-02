@@ -1,6 +1,7 @@
 package com.dealership.server;
 
 import java.io.*;
+import java.util.ArrayList;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -23,6 +24,9 @@ public class CheckoutServlet extends HttpServlet {
 	}
 	
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		//update homepage
+		HomepageServlet.recentPurchase = new ArrayList<Vehicle>(cart.getItems());
 		
 		for (Vehicle vehicle : cart.getItems()) {
 			

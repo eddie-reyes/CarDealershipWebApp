@@ -13,23 +13,28 @@
 		<style><%@include file="index.css"%></style>
 	</head>
 	<body>
-		<h1>Items in Cart</h1>
+		<h1 class="header">Checkout</h1>
 		<div class="cart-items">
 			<c:forEach items="${CheckoutServlet.cart.items}" var="vehicle" varStatus="loop">
 			
 				<div class="cart-card">
 
-					<img src=${ vehicle.getImageLink() } alt=${ vehicle.getMake() } width="300" height="300">
-					<h2>${ vehicle.getYear()} ${ vehicle.getMake()} ${ vehicle.getModel()}</h2>
-					<h2>$${ vehicle.getPrice()}</h2>
+					<img src=${ vehicle.getImageLink() } alt=${ vehicle.getMake() }>
+					<ul>
+						<li>${ vehicle.getYear()} ${ vehicle.getMake()} ${ vehicle.getModel()} <i>(${vehicle.getPreOwned()})</i></li>
+						<li> &middot &middot &middot</li>
+						<li>$${ vehicle.getPrice()}</li>
+					</ul>
+					
 					
 				</div>
 
 			</c:forEach>
 		</div>
-		<h2>Total: $${CheckoutServlet.cart.getTotalCost() }</h2>
+		
 		
 		<div class="purchase">
+			<h2>Total: $${CheckoutServlet.cart.getTotalCost() }</h2>
 			<form method="post">
 				<a href="./homepage">
 					<button>Purchase</button>
