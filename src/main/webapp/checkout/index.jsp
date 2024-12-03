@@ -11,6 +11,11 @@
 		<meta charset="UTF-8">
 		<title>Checkout</title>
 		<style><%@include file="index.css"%></style>
+		<script>
+			function onPurchase() {
+			  alert("Thank you for your purchase!");
+			}
+		</script>
 	</head>
 	<body>
 		<h1 class="header">Checkout</h1>
@@ -37,7 +42,7 @@
 			<h2>Total: $${CheckoutServlet.cart.getTotalCost() }</h2>
 			<form method="post">
 				<a href="./homepage">
-					<button>Purchase</button>
+					<button onclick="onPurchase()">Purchase</button>
 				</a>
 			</form>
 		</div>

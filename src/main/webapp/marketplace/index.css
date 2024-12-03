@@ -38,7 +38,6 @@ h1 {
 	
 	text-align: center;
     margin : 0;
-    margin-bottom: 50px;
     padding: 20px;
     background-color: #333;
     color: white;
@@ -61,12 +60,15 @@ h1 {
 	
 	position: fixed;
 	width: 100%;
-	bottom: 0px;
+	bottom: 0;
+	left: 0;
 	background: white;
 
 	padding : 1.5rem;
 	
 }
+
+
 
 .cart-text {
 	
@@ -90,6 +92,7 @@ h1 {
 li {
 	
 	list-style-type: none; /* Remove bullets */
+	margin: 0.5rem 0;
 
 }
 
@@ -112,19 +115,26 @@ span {
 	
 }
 
-button {
+button, a {
 	display: inline-block;
 	padding: 10px 20px;
 	background: #1098ad;
 	color: white;
 	border-radius: 4px;
-	margin-top: 15px;
 	border: none;
+	text-decoration: none;
 	
 }
 
-button:hover {
+button:hover, a:hover {
 	background: #0c7b8d;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
 }
 
 .vehicle-name {
@@ -133,6 +143,16 @@ button:hover {
 	font-size : 1.5em;
 	
 }
+
+.nav-links {
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 20px auto;
+	gap: 10px;
+}
+	
 
 
 

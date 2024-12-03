@@ -38,9 +38,6 @@ public class CheckoutServlet extends HttpServlet {
 		
 		
 		request.getRequestDispatcher("homepage/index.jsp").forward(request, response); //forward back to homepage
-	}
-	
-	
-	
+	}	
 	
 }

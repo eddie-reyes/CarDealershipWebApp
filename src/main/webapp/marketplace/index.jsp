@@ -15,6 +15,13 @@
 	</head>
 	<body>
 		<h1 class="header">Marketplace</h1>
+		<div class="nav-links">
+				<h2>Sort by:</h2>
+				<a href="./marketplace?sort=car">Cars</a>
+				<a href="./marketplace?sort=motorcycle">Motorbikes</a>
+				<a href="./marketplace?sort=boat">Boats</a>
+				<a href="./marketplace?sort=none">All Vehicles</a>
+			</div>
 		<div class="marketplace-lot">
 			<c:forEach items="${MarketplaceServlet.vehicles}" var="vehicle" varStatus="loop">
 			
@@ -50,7 +57,7 @@
 		</div>
 		
 		<div class="cart">
-			<h2 class="cart-text">Items in cart: ${ CheckoutServlet.cart.getItems().size() }&nbsp&nbsp<a href="./checkout"><button>Go to Checkout</button></a></h2>
+			<h2 class="cart-text">Items in cart: ${ CheckoutServlet.cart.getItems().size() }&nbsp&nbsp<a href="./checkout">Go to Checkout</a></h2>
 			
 		</div>
 	</body>

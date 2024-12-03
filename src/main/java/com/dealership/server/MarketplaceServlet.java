@@ -303,7 +303,7 @@ public class MarketplaceServlet extends HttpServlet {
 			"https://cdn.denisonyachtsales.com/wp-content/uploads/2011/05/61-Sunseeker-Predator-Review.jpg",
 			2002,
 			475000,
-			0,
+			5,
 			true,
 			BoatBodyStyle.CRUISER));
 		vehicles.add(new Boat(
@@ -312,7 +312,7 @@ public class MarketplaceServlet extends HttpServlet {
 			"https://images.boatsgroup.com/resize/1/30/29/1991-johnson-63-flybridge-power-9443029-20240625102954395-1_XLARGE.jpg",
 			1991,
 			199000,
-			0,
+			1.7,
 			true,
 			BoatBodyStyle.FLYBRIDGE));
 		vehicles.add(new Boat(
@@ -321,7 +321,7 @@ public class MarketplaceServlet extends HttpServlet {
 			"https://www.searay.com/content/dam/searay/2024/model-images/spx/spx-230/2024-SPX-230-SPX230-running-starboard-stern-08674.jpg.transform/small/image.jpg",
 			2024,
 			78999,
-			0,
+			4.2,
 			true,
 			BoatBodyStyle.BOWRIDER));
 		vehicles.add(new Boat(
@@ -330,7 +330,7 @@ public class MarketplaceServlet extends HttpServlet {
 			"https://yamahaoutboards.com/getmedia/248ce268-92ef-4f40-a89d-d988adf4b843/Leader_12-5_2020_TomKing_04128_Edit.jpg",
 			2020,
 			110000,
-			0,
+			3,
 			false,
 			BoatBodyStyle.CRUISER));
 		vehicles.add(new Boat(
@@ -339,7 +339,7 @@ public class MarketplaceServlet extends HttpServlet {
 			"https://images.boatsgroup.com/resize/1/23/56/2024-benetti-oasis-34m-power-9452356-20240731162651446-1_XLARGE.jpg?w=200&h=146&t=1727294169000&exact&format=webp",
 			2025,
 			4984663,
-			0,
+			2.1,
 			false,
 			BoatBodyStyle.YACHT));
 		
